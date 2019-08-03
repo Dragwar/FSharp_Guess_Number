@@ -1,12 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
+    <Compile Include="Game/GetInput.fs" />
+    <Compile Include="Game/GameManager.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
-
 </Project>
