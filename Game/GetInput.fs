@@ -29,9 +29,13 @@ let rec GetIntWhere msg predicate =
 let rec YesOrNo msg =
     printf "%s" msg
     match Console.ReadLine() with
-    | str when str.ToUpper() = "Y" || str.ToUpper() = "YES"-> true
-    | str when str.ToUpper() = "N" || str.ToUpper() = "NO" -> false
-    | str when String.IsNullOrWhiteSpace str -> YesOrNo msg
-    | _ -> YesOrNo msg
+    | str when str.ToUpper() = "Y" -> true
+    | str when str.ToUpper() = "YES" -> true
+    | str when str.ToUpper() = "N" -> false
+    | str when str.ToUpper() = "NO" -> false
+    | _ -> 
+        Console.ForegroundColor <- ConsoleColor.Red
+        YesOrNo msg
+
 
     
